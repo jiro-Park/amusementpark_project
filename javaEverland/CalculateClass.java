@@ -1,15 +1,27 @@
 package javaEverland;
 
-public class CalculateClass {
-	private final int[]DAY_TICKET_PRICE = {56000,47000,44000,44000}; 
-	private final int[]NIGHT_TICKET_PRICE = {46000,40000,37000,37000};
-	private final int AGELIMIT_BABY = 2;
-	private final int AGELIMIT_CHILD = 12;
-	private final int AGELIMIT_ADOLESCENT = 18;
-	private final int AGELIMIT_ADULT = 64;
-	private final double DISABLED_DISCOUNT_RATE = 0.6;
-	private final double MERIT_DISCOUNT_RATE = 0.5;
-	private final double MULTICHILD_DISCOUNT_RATE = 0.8;
-	private final double  PREGNANT_DISCOUNT_RATE= 0.85;
+import java.util.Calendar;
 
+public class CalculateClass {
+
+	public int calAgeType(String residentNum) {
+		Calendar cal = Calendar.getInstance();
+		int ageType, bornYear;
+		
+		bornYear = Integer.parseInt(residentNum.substring(0, 2));
+		int koreanAge = cal.YEAR - bornYear + 1;
+		
+		if(koreanAge<=ConstValueClass.getAGELIMIT_BABY()) {
+			ageType = ConstValueClass.getAgetypeBaby();
+	    } else if (koreanAge <= ConstValueClass.getAGELIMIT_CHILD()) {
+	    	ageType =ConstValueClass.getAGETYPE_CHILD();
+	    } else if (koreanAge <= ConstValueClass.getAGELIMIT_ADOLESCENT()) {
+	    	ageType = ConstValueClass.getAGETYPE_ADOLESCENT();
+	    } else if (koreanAge > ConstValueClass.getAGELIMIT_ADULT()) {
+	    	ageType = ConstValueClass.getAGETYPE_ELDER();
+	    } else {
+	    	ageType = ConstValueClass.getAGELIMIT_ADULT();
+	    }
+		return ageType;
+	}
 }

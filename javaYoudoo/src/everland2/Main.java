@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList; //깃에 워크스페이스 이클립스 폴더 통째로 올려야..import하기 쉬움
 							// 파일 경로.. 그냥 파일명으로 찾을 수 있게끔
 
-import javaEx2.FileWriteClass;
+
 
 public class Main {
 	static ArrayList<CustomerInfo> customerArr = new ArrayList<CustomerInfo>();

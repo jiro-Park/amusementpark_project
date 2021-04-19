@@ -12,7 +12,7 @@ public class FileWrite {
 
 	public FileWrite() throws IOException {                  // 생성자 호출시 파일 기록관련 객체 생성
 		try {
-			bw = new BufferedWriter(new FileWriter("C:\\Users\\p\\Desktop\\out.txt", true));
+			bw = new BufferedWriter(new FileWriter("out0.txt", true));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

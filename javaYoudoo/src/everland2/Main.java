@@ -11,7 +11,7 @@ public class Main {
 	static ArrayList<CustomerInfo> customerArr = new ArrayList<CustomerInfo>();
 
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:\\Users\\p\\Desktop\\out.txt");
+		File file = new File("out0.txt");
 		InputClass ic = new InputClass();
 		OutputClass oc = new OutputClass();
 		CalculateClass cc = new CalculateClass();
@@ -22,7 +22,8 @@ public class Main {
 
 		CustomerInfo customerInfo = null;
 
-		if (file.exists()) {        
+		if (file.exists()) { 
+			fr.readFromFile();
 		} else { 
 			fw.saveTitle();
 		}

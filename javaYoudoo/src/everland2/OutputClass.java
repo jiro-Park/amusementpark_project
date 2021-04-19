@@ -18,13 +18,13 @@ public class OutputClass {
 		for (int i = 0; i < Main.customerArr.size(); i++) {
 
 			cuc = Main.customerArr.get(i);
-			System.out.printf("%s %s X %d  %d *우대적용 %s\n", cuc.getTicketType_string(), cuc.getAgeType_string(),
+			System.out.printf("%s %s X %d  %d  *우대적용 %s\n", cuc.getTicketType_string(), cuc.getAgeType_string(),
 					cuc.getTicketNum(), cuc.getMiniSum(), cuc.getAdvantegeType_string());
 			sum += cuc.getMiniSum();
 		}
 		System.out.printf("입장료 총액은 %d 원 입니다\n", sum);
 
-		System.out.printf("========================================================\n");
+		System.out.printf("==========================================================\n");
 
 	}
 

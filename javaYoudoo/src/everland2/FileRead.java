@@ -19,17 +19,18 @@ public class FileRead {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void readFromFile() throws IOException {
-	
-		
 		String line;
 
 		while (true) {
 			line = br.readLine();
+
+			if (line == null)
+				break;
 			System.out.println(line);
-			if (line == null) break;
-			
+
 		}
-}
+		System.out.println();
+	}
 }

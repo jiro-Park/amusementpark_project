@@ -16,7 +16,7 @@ public class OutputClass {
 		System.out.printf("===========================%s=======================\n", " 에버랜드 ");
 		for (int i = 0; i < Main.customerArr.size(); i++) {
 			cuc = Main.customerArr.get(i);
-			System.out.printf("%s %s X %d  %d  *우대적용 %s\n", cuc.getTicketType(), cuc.getAgeType(), 
+			System.out.printf("%s %5s X %2d  %8d  *우대적용 %6s\n", cuc.getTicketType(), cuc.getAgeType(), 
 					cuc.getTicketNum(), cuc.getMiniSum(), cuc.getAdvantageType());
 			sum += cuc.getMiniSum();
 		}

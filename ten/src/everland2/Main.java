@@ -14,6 +14,7 @@ public class Main {                                                             
 		FileWrite fw = new FileWrite();
 		FileRead fr = new FileRead();
 		CustomerInfo customerInfo = null;
+		Database db = new Database();
 		int ticketType, ticketNum, advantageType, sum;
 		String residentNum;
 
@@ -28,6 +29,7 @@ public class Main {                                                             
 			customerInfo = new CustomerInfo(cc.setDate(), ticketType, residentNum, ticketNum, advantageType, sum,
 					cc.calAgeType(residentNum));                                             // 자료구조에 데이터 저장
 			customerArr.add(customerInfo);                                               // arraylist에 자료구조 저장
+			db.saveToDatabase(customerInfo);                                                // 데이터베이스에 자료 저장
 			oc.printSum(ticketType, residentNum, ticketNum, advantageType);                    // 현 주문건 정보 출력
 
 			if (ic.InputStopOrContinue() == 2)                                             // 계속 진행할 지 여부 입력

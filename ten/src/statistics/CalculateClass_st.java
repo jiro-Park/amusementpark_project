@@ -88,11 +88,11 @@ public class CalculateClass_st {
 	}
 
 	public void printStatistics() {                                                 // 매출 분석 통계 출력
-		System.out.printf("%6s %13s %10s %9s %9s %10s \n", DataClass.DATE, DataClass.TICKET_TYPE, DataClass.AGE_TYPE,
+		System.out.printf("%6s %8s %6s %4s %5s %8s \n", DataClass.DATE, DataClass.TICKET_TYPE, DataClass.AGE_TYPE,
 				DataClass.TICKET_NUM, DataClass.ADVANTAGE, DataClass.PRICE);
 		for (int i = 0; i < cnt-1; i++) {
-			System.out.printf("%10s %10s %10s %10s %10s %12s \n", arr.get(i).getDate(), arr.get(i).getTicketType("int"),
-					arr.get(i).getAgeType("int"), arr.get(i).getTicketNum(), arr.get(i).getAdvantageType("int"),
+			System.out.printf("%10.10s %5.5s %5.5s %5.5s %5.5s %12.12s \n", arr.get(i).getDate(), arr.get(i).getTicketType(),
+					arr.get(i).getAgeType(), arr.get(i).getTicketNum(), arr.get(i).getAdvantageType(),
 					arr.get(i).getMiniSum());
 		}
 		System.out.println("--------------------------------------------------------------------\n");
